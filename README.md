@@ -72,8 +72,9 @@ Field contents are not rendered on card. Primarily used in two cases. Hide text 
 <br>
 
 
-#### Example:
+## Example:
 `Note:` Sentence `Card:` Listen
+
 ``` html
 <!-- Front Template -->
 <div class="box header hcolor">Écoute:</div>
@@ -84,9 +85,9 @@ Field contents are not rendered on card. Primarily used in two cases. Hide text 
 @import '_french_style.css';
 
 <!-- Back Template -->
-<div class="box header hcolor" id=sentence>{{Phrase}}</div>
+<div class="box header hcolor">{{Phrase}}</div>
 {{#Anglais}}<div class="box peek">{{Anglais}}</div>{{/Anglais}}
-{{#Notes}}<div class="box" id=notes>{{Notes}}</div>{{/Notes}}
+{{#Notes}}<div class="box">{{Notes}}</div>{{/Notes}}
 {{#Question!}}<div class="box question">{{Question!}}</div>{{/Question!}}
 {{#Tags}}<div class="box tags"># {{Tags}}</div>{{/Tags}}
 ```
@@ -94,3 +95,5 @@ Field contents are not rendered on card. Primarily used in two cases. Hide text 
 [Google Fonts : Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab)
 
 ---
+
+## Installation
