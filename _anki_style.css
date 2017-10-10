@@ -1,0 +1,127 @@
+.card {
+	max-width: 700px;
+
+	margin: 40px auto;
+
+  font-family: 'Roboto Slab', serif;
+	font-size: 15px;
+	text-align: center;
+
+	background-color: white;
+}
+
+
+/* --------------------- box : all cards : all divs -------------------- */
+.box {
+	width: 700px;
+	box-sizing: border-box;
+	margin: 5px 0px;
+	padding: 15px 50px;
+	float: left;
+
+	background-color: #EDEDED;
+	border-left: 3px solid #CCCCCC;
+
+	text-align: left;
+	color: #808080;
+}
+
+/* ----------- header : modifies box : container for testing ----------- */
+.header {
+	border-left: 0;
+
+	font-size: 20px;
+	color: #333333;
+}
+
+.hcolor {
+	border-top: 3px solid #A6AADD;
+}
+
+.hgray {
+	border-top: 3px solid #CCCCCC;
+}
+
+
+/* ------- conversation : modifies box : just conversation cards ------- */
+.conversation {
+	padding: 10px 30px;
+
+	border-left: 0;
+	border-top: 3px solid #A6AADD;
+
+	font-size: 14px;
+	text-align: justify;
+}
+
+
+/* ----------- question : modifies box : changes border color ---------- */
+.question {
+	border-left: 3px solid #A6AADD;
+}
+
+
+/* ---- peek, peek:hover : modifies box : makes cards 'three-sided' ---- */
+.peek {
+	background: url('_peek_bg.png');
+	background-size: 100%;
+	color: rgba(0, 0, 0, 0);
+}
+
+.peek:hover {
+	background-image: none;
+	background-color:#EDEDED;
+	color: #999999;
+}
+
+
+/* ------------------------ tags : modifies box ------------------------ */
+.tags {
+	margin: 30px 0;
+
+	background-color:#FFFFFF;
+	border-left: 0;
+
+	font-size: 13px;
+	color: #CCCCCC;
+	text-align: center;
+}
+
+
+/* -------------------- hidden : just hide it dummy! ------------------- */
+.hidden { display: none; }
+
+
+/* ------------------------------- lists ------------------------------- */
+ul {
+	padding: 0;
+
+	list-style-image: url('_bullet_sq.gif');
+	list-style-position: inside;
+}
+
+li.type {
+	padding: 5px 0;
+
+	color: #88B350;
+
+	list-style: none;
+}
+
+
+/* ------------------------------- images ------------------------------ */
+img {
+	border-left: 3px solid white;
+	border-right: 3px solid white;
+
+	max-width: 50%;
+	max-height: 50%;
+}
+
+.pic {
+	padding: 0;
+
+	text-align: center;
+	line-height: 0;
+}
+

@@ -1,0 +1,17 @@
+# compiled Python files
+*.pyc
+
+# folder view configuration files
+.DS_Store
+Desktop.ini
+
+# thumbnail cache files
+._*
+Thumbs.db
+
+# files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# project folders
+_*/
