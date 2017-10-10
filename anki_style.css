@@ -63,7 +63,7 @@
 
 /* ---- peek, peek:hover : modifies box : makes cards 'three-sided' ---- */
 .peek {
-	background: url('_peek_bg.png');
+	background: url('peek_bg.png');
 	background-size: 100%;
 	color: rgba(0, 0, 0, 0);
 }
@@ -96,7 +96,7 @@
 ul {
 	padding: 0;
 
-	list-style-image: url('_bullet_sq.gif');
+	list-style-image: url('bullet_sq.gif');
 	list-style-position: inside;
 }
 
