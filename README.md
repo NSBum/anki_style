@@ -1,8 +1,6 @@
 # anki_style
 
-[[toc]]
-
-A live version of anki_style can be seen here: https://se110785.github.io/anki_style/
+A live version of anki_style can be seen here: https://tnahs.github.io/anki_style/
 
 Each of these boxes you see here are part of a standardized style sheet I've developed over the past year or so while using Anki. It by no means is an exhaustive set of classes for all situations but it covers the basic cards for when learning a language. Namely reviewing: vocabulary, sentences, and conversations. However, most of these classes, if not all, can also be used with any type of card, it's really not limited to languages or any specific topics.
 
