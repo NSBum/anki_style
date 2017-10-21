@@ -2,9 +2,9 @@
 
 A live version of anki_style can be seen here: https://tnahs.github.io/anki_style/
 
-Each of these boxes you see here are part of a standardized style sheet I've developed over the past year or so while using Anki. It by no means is an exhaustive set of classes for all situations but it covers the basic cards for when learning a language. Namely reviewing: vocabulary, sentences, and conversations. However, most of these classes, if not all, can also be used with any type of card, it's really not limited to languages or any specific topics.
+anki_style is a standardized style sheet I've developed over the past year or so while using Anki while learning French. It by no means is an exhaustive set of classes for all situations but it covers the basic cards for when learning a language. Namely reviewing: vocabulary, sentences, and conversations. However, most of these classes, if not all, can also be used with any type of card, it's not limited to either languages or specific topics.
 
-The motivation behind this was that I was looking for a way to flexibly format and re-format my cards. Removing almost all HTML and CSS from Anki ensures that I can change/edit/tweak the color palette or overall theme without having to sift through thousands of cards.
+The aim was to have a way to flexibly format and re-format my cards. Removing almost all HTML and CSS from Anki ensures that I can change/edit/tweak the color palette or overall theme without having to sift through thousands of cards.
 
 ## Installation
 
