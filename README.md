@@ -113,6 +113,8 @@ This takes any `box` class and makes the inner text invisible until a hover. It 
 ```html
 <div class="box pic">{{field}}</div>
 ```
+The `pic` class auto-resizes an image to fit within the bounds of the div and styles it to match the rest of the aesthetic.
+
 ![as_0004_box-header](images/as_0009_box-pic.png)
 
 <br>
