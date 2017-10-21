@@ -9,15 +9,18 @@ The motivation behind this was that I was looking for a way to flexibly format a
 ## Installation
 
 **Required:** 
-  - `anki_style.css`
+`anki_style.css`
+
+**Optional:**
+[Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab) from Google Fonts
 
 <br>
 
 1. Copy `anki_style.css` to your `collections.media` folder. 
 
->Note: Make sure to add a leading underscore `_` to each file. Because these items are not explicitly referenced in any fields, Anki will see them as un-used media when `Tools>Check Media` is run. By adding a leading underscore Anki ignores these files when checking media.
+>Note: Make sure to add a leading underscore `_` to the filename. Because the style sheet is not explicitly referenced in any fields, Anki will see it as un-used media when `Tools>Check Media` is run. By adding a leading underscore Anki ignores the file when checking media.
 >
->Thus: `_anki_cloze.js` and `_anki_cloze_style.css` will be in your `collections.media` folder.
+>Thus: `_anki_style.css` will be in your `collections.media` folder.
 
 The `collections.media` is located:
 >On **Windows**, the latest Anki versions store your Anki files in your appdata folder. You can access it by opening the file manager, and typing` %APPDATA%\Anki2` in the location field. Older versions of Anki stored your Anki files in a folder called `Anki` in your `Documents` folder.
@@ -30,10 +33,23 @@ The `collections.media` is located:
 
 <br>
 
-1. Add `@import 'anki_style.css';` to the `Styling` section of your note.
+2. Add `@import 'anki_style.css';` to the `Styling` section of your note.
 
 <br>
 
+3. In the `Front Template` or `Back Template` of your `Card Types` window:  
+
+- Create a div `<div></div>`
+- Add a class attribute `<div class=""></div>`
+- Assign a specific class from the list below. `<div class="box header hcolor"></div>`
+
+<br>
+
+4. Download [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab) and install using the method of your specific OS. https://apps.ankiweb.net/docs/manual.html#installing-fonts
+
+<br>
+
+## Classes
 
 `box`:
 ```html
@@ -43,7 +59,7 @@ The `collections.media` is located:
 ![as_0001_box2](images/as_0001_box2.png)
 
 Using an unordered list: 
-```
+```html
 <ul>
   <li>This is how I format...</li>
   <li>multiple definitions.</li>
@@ -51,7 +67,21 @@ Using an unordered list:
 ```
 ![as_0002_box3](images/as_0002_box3.png)
 
-![as_0002_box3](images/as_0002_box4.png)
+Adding `type`:
+```html
+  <ul>
+	<li class=type>This li.type class is used...</li>
+	<li>as a separator in case...</li>
+	<li>a word has multiple forms.</li>
+	<li class=type>noun</li>
+	<li>noun definition 1</li>
+	<li>noun definition 2</li>
+	<li class=type>adjective</li>
+	<li>adjective definition 1</li>
+	<li>adjective definition 2</li>
+  </ul>
+```
+![as_0002_box3](images/as_0003_box4.png)
 
 <br>
 
@@ -60,10 +90,10 @@ Using an unordered list:
 ``` html
 <div class="box question">{{field}}</div>
 ```
-![as_0003_box-question](images/as_0003_box-question.png)
+![as_0003_box-question](images/as_0004_box-question.png)
+> For example: `<div class="box question">{{Quesion}}</div>` and a saved search such as: `Question:*_*` can be setup to return all cards with something in the `{{Quesion}}` field. I find it handy to compile a bunch of questions to ask a native speaker, or do research on at a later time.
 
 <br>
-
 
 `peek` box:
 
@@ -72,10 +102,10 @@ Using an unordered list:
 ```
 This takes any `box` class and makes the inner text invisible until a hover. It makes cards "three-sided." A sentence translation can be revealed on the back template only after someone has hovered over the box. For example, with a listening card, the back of a card can be revealed to confirm what was heard in the target language without revealing the translation.
 
-![as_0007_peek](images/as_0007_peek.png)
-![as_0008_revealed1](images/as_0008_revealed1.png)
-![as_0009_revealed2](images/as_0009_revealed2.png)
-![as_0010_revealed3](images/as_0010_revealed3.png)
+![as_0007_peek](images/as_0005_peek.png)
+![as_0008_revealed1](images/as_0006_revealed1.png)
+![as_0009_revealed2](images/as_0007_revealed2.png)
+![as_0010_revealed3](images/as_0008_revealed3.png)
 
 <br>
 
@@ -83,7 +113,7 @@ This takes any `box` class and makes the inner text invisible until a hover. It 
 ```html
 <div class="box pic">{{field}}</div>
 ```
-![as_0004_box-header](images/as_0004_box-image.png)
+![as_0004_box-header](images/as_0009_box-pic.png)
 
 <br>
 
@@ -92,7 +122,7 @@ This takes any `box` class and makes the inner text invisible until a hover. It 
 ``` html
 <div class="box header">{{field}}</div>
 ```
-![as_0004_box-header](images/as_0004_box-header.png)
+![as_0004_box-header](images/as_0010_box-header.png)
 
 <br>
 
@@ -104,8 +134,8 @@ This takes any `box` class and makes the inner text invisible until a hover. It 
 ```
 This is a purely aesthetic adjustment to the top border color of the `header` class.
 
-![as_0005_box-header-hcolor](images/as_0005_box-header-hcolor.png)
-![as_0006_box-header-hgray](images/as_0006_box-header-hgray.png)
+![as_0005_box-header-hcolor](images/as_0011_box-header-hcolor.png)
+![as_0006_box-header-hgray](images/as_0012_box-header-hgray.png)
 
 <br>
 
@@ -114,9 +144,9 @@ This is a purely aesthetic adjustment to the top border color of the `header` cl
 ``` html
 <div class="box conversation">{{field}}</div>
 ```
-This is used for conversation cards. Fonts are styled smaller along with some minor aesthetic adjustments.
+This is used only for conversation cards. Fonts are styled smaller along with some minor aesthetic adjustments. 
 
-![as_0011_conversation](images/as_0011_conversation_new.png)
+![as_0011_conversation](images/as_0013_conversation.png)
 
 <br>
 
@@ -127,14 +157,14 @@ This is used for conversation cards. Fonts are styled smaller along with some mi
 Faintly displays the current tags. 
 >Note: Actual style does not have outline.
 
-![as_0012_tag](images/as_0012_tag.png)
+![as_0012_tag](images/as_0014_tag.png)
 
 <br>
 
 `hidden`:
-Field contents are not rendered on card. Primarily used in two cases. Hide text that's being fed to AwesomeTTS and hide text being fed to a javascript function.
+Field contents are not rendered on card. Primarily used in two cases. Hide text that's being fed to AwesomeTTS and hide text being fed to a javascript function. In these cases I usually use a `<span></span>` instead of a `<div></div>`.
 ```html
-<div class="hidden">{{field}}</div>
+<span class="hidden">{{field}}</span>
 ```
 <br>
 
@@ -166,5 +196,3 @@ Field contents are not rendered on card. Primarily used in two cases. Hide text 
 {{#Question!}}<div class="box question">{{Question!}}</div>{{/Question!}}
 {{#Tags}}<div class="box tags"># {{Tags}}</div>{{/Tags}}
 ```
-
-[Google Fonts : Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab)
