@@ -8,7 +8,7 @@ The aim was to have a way to flexibly format and re-format my cards. Removing al
 
 ## Installation
 
-**Required:** 
+**Required:**
 `anki_style.css`
 
 **Optional:**
@@ -16,11 +16,11 @@ The aim was to have a way to flexibly format and re-format my cards. Removing al
 
 <br>
 
-1. Copy `anki_style.css` to your `collections.media` folder. 
+1. Copy `anki_style.css`, `bullet_sq.gif` and `peek_bg.png` to your `collections.media` folder.
 
 >Note: Make sure to add a leading underscore `_` to the filename. Because the style sheet is not explicitly referenced in any fields, Anki will see it as un-used media when `Tools>Check Media` is run. By adding a leading underscore Anki ignores the file when checking media.
 >
->Thus: `_anki_style.css` will be in your `collections.media` folder.
+>Thus: `_anki_style.css`, `_bullet_sq.gif` and `_peek_bg.png` will be in your `collections.media` folder.
 
 The `collections.media` is located:
 >On **Windows**, the latest Anki versions store your Anki files in your appdata folder. You can access it by opening the file manager, and typing` %APPDATA%\Anki2` in the location field. Older versions of Anki stored your Anki files in a folder called `Anki` in your `Documents` folder.
@@ -37,7 +37,7 @@ The `collections.media` is located:
 
 <br>
 
-3. In the `Front Template` or `Back Template` of your `Card Types` window:  
+3. In the `Front Template` or `Back Template` of your `Card Types` window:
 
 - Create a div `<div></div>`
 - Add a class attribute `<div class=""></div>`
@@ -58,7 +58,7 @@ The `collections.media` is located:
 ![as_0000_box1](images/as_0000_box1.png)
 ![as_0001_box2](images/as_0001_box2.png)
 
-Using an unordered list: 
+Using an unordered list:
 ```html
 <ul>
   <li>This is how I format...</li>
@@ -146,7 +146,7 @@ This is a purely aesthetic adjustment to the top border color of the `header` cl
 ``` html
 <div class="box conversation">{{field}}</div>
 ```
-This is used only for conversation cards. Fonts are styled smaller along with some minor aesthetic adjustments. 
+This is used only for conversation cards. Fonts are styled smaller along with some minor aesthetic adjustments.
 
 ![as_0011_conversation](images/as_0013_conversation.png)
 
@@ -156,7 +156,7 @@ This is used only for conversation cards. Fonts are styled smaller along with so
 ```html
 <div class="box tags"># {{field}}</div>
 ```
-Faintly displays the current tags. 
+Faintly displays the current tags.
 >Note: Actual style does not have outline.
 
 ![as_0012_tag](images/as_0014_tag.png)
