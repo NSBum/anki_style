@@ -10,7 +10,6 @@
 	background-color: white;
 }
 
-
 /* --------------------- box : all cards : all divs -------------------- */
 .box {
 	width: 700px;
@@ -63,7 +62,7 @@
 
 /* ---- peek, peek:hover : modifies box : makes cards 'three-sided' ---- */
 .peek {
-	background: url('peek_bg.png');
+	background: background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAIAAABLMMCEAAAAM0lEQVQImWXKsQ0AMAjEQMMGv/+OMAJpkILA5ckWEYwkAX4pM/3Sfye1LgKsqhb1u0jSA8laF9RH3QQiAAAAAElFTkSuQmCC');
 	background-size: 100%;
 	color: rgba(0, 0, 0, 0);
 }
@@ -96,7 +95,7 @@
 ul {
 	padding: 0;
 
-	list-style-image: url('bullet_sq.gif');
+	list-style-image: url('data:image/gif;base64,R0lGODlhBAAHAIABAKysrP///yH5BAEAAAEALAAAAAAEAAcAAAIHhI8Jwe1cAAA7');
 	list-style-position: inside;
 }
 
@@ -125,3 +124,6 @@ img {
 	line-height: 0;
 }
 
+.center {
+	text-align: center;
+}
